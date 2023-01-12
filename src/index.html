@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phone Directory</title>
+    <link href="https://cdn.jsdelivr.net/npm/h8k-design@latest/dist/index.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/npm/h8k-design@latest/dist/assets/favicon.ico">
+    <script src="https://cdn.jsdelivr.net/npm/h8k-components/dist/h8k-components/h8k-components.esm.js"
+            type="module"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/h8k-components/dist/h8k-components/h8k-components.js"></script>
+</head>
+
+<body>
+<h8k-navbar header='Phone Directory'></h8k-navbar>
+<div class="layout-column justify-content-center mt-75">
+    <div class="mx-auto">
+        <input type="text" id="name" data-testid="name" value="" placeholder="Contact Name"/>
+        <input type="text" maxlength="10" id="mobile" data-testid="mobile" value="" placeholder="Mobile Number"/>
+        <input type="email" id="email" data-testid="email" value="" placeholder="Email"/>
+        <button type="submit" id="submit" data-testid="submit" class="small">
+            Add Contact
+        </button>
+        <div id="error" data-testid="error" class="text-center error alert mx-75 mt-30">
+            Invalid Input!
+        </div>
+    </div>
+    <div class="card mx-auto mt-30 w-75 contacts-card">
+        <h4 class="ml-30" id="contactsSummary">Contacts Summary</h4>
+        <div id="contactSummary" class="contactSummary">
+            <table id="summaryTable" data-testid="summaryTable">
+                <thead>
+                <tr>
+                    <th id="nameColumn">Name</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                </tr>
+                </thead>
+                <tbody>
+<!--                <tr>-->
+<!--                    <td>Admin</td>-->
+<!--                    <td>9999999999</td>-->
+<!--                    <td>admin@xyzcompany.com</td>-->
+<!--                </tr>-->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+</div>
+<!-- HMR and test infrastructure - DO NOT EDIT -->
+<script src="bundle.js"></script>
+</body>
+</html>
